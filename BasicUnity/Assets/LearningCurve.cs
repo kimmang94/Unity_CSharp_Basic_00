@@ -37,4 +37,11 @@ public class LearningCurve : MonoBehaviour
     // - 실제로 클래스는 청사진과 같다. 생성된 모든 객체(인스턴스라고 한다) 에 대한 규칙과 규정은 클래스 청사진을 사용해 설정한다.
 
     #endregion
+
+    #region Start & Update Method
+
+    // Start 함수는 Monobehaviour 이 지원하며 유니티 실행시 시작
+    // Update 함수는 기기별로 속도는 다르지만 매 프레임 실행
+
+    #endregion
 }
