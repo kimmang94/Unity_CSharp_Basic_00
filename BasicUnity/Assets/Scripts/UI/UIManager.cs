@@ -1,18 +1,33 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
 
 public class UIManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Button startBtn = null;
+    [SerializeField] private Button optionsBtn = null;
+    [SerializeField] private Button quitBtn = null;
+    private void Awake()
+    {
+        startBtn.onClick.AddListener(OnClickGameStartBtn);
+        optionsBtn.onClick.AddListener(OnClickOptionsBtn);
+        quitBtn.onClick.AddListener(OnClickQuitBtn);        
+    }
+
+    private void OnClickGameStartBtn()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnClickOptionsBtn()
     {
         
+    }
+    
+    private void OnClickQuitBtn()
+    {
+        Application.Quit();
     }
 }
