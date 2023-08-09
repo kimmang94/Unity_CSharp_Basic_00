@@ -19,15 +19,16 @@ public class UIManager : MonoBehaviour
 
     private void OnClickGameStartBtn()
     {
-        
+        Debug.Log("Start");
     }
     private void OnClickOptionsBtn()
     {
-        
+        Debug.Log("Options");
     }
     
     private void OnClickQuitBtn()
     {
+        Debug.Log("App QUIT");
         Application.Quit();
     }
 }
