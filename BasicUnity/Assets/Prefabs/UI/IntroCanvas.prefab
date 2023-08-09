@@ -2660,7 +2660,7 @@ RectTransform:
   - {fileID: 925537913102240500}
   - {fileID: 5588570838998589213}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2745,6 +2745,9 @@ MonoBehaviour:
   startBtn: {fileID: 1100875606071016806}
   optionsBtn: {fileID: 4379679641428082858}
   quitBtn: {fileID: 9030527923739138635}
+  optionPanel: {fileID: 2715608815254556237}
+  agreeBtn: {fileID: 548698168768552236}
+  cancleBtn: {fileID: 1897334329159282304}
 --- !u!1 &7705712933357630856
 GameObject:
   m_ObjectHideFlags: 0
