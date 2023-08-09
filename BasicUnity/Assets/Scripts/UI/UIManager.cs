@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
 
@@ -20,6 +21,7 @@ public class UIManager : MonoBehaviour
     private void OnClickGameStartBtn()
     {
         Debug.Log("Start");
+        SceneManager.LoadScene("LobbyScene");
     }
     private void OnClickOptionsBtn()
     {
