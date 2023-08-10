@@ -17,6 +17,8 @@ public class UIManager : MonoBehaviour
     // panel Btn
     [SerializeField] private Button agreeBtn = null;
     [SerializeField] private Button cancleBtn = null;
+    
+    [SerializeField] private Button backBtn = null;
     private void Awake()
     {
         startBtn.onClick.AddListener(OnClickGameStartBtn);
@@ -24,6 +26,7 @@ public class UIManager : MonoBehaviour
         quitBtn.onClick.AddListener(OnClickQuitBtn);        
         agreeBtn.onClick.AddListener(OnAgreeBtn);
         cancleBtn.onClick.AddListener(OnCancleBtn);
+        backBtn.onClick.AddListener(OnClickBackBtn);
     }
 
     private void OnClickGameStartBtn()
