@@ -52,4 +52,9 @@ public class UIManager : MonoBehaviour
     {
         Debug.Log("옵션 데이터 저장");
     }
+
+    private void OnClickBackBtn()
+    {
+        Debug.Log("BackBtn");
+    }
 }
