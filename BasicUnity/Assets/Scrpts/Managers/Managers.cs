@@ -6,7 +6,13 @@ using UnityEngine;
 public class Managers : MonoBehaviour
 {
     private static Managers s_instance; // 유일성 보장
-    public static Managers Instance { get { return s_instance; } }// 유일한 매니저를 갖고온다
+    public static Managers Instance // 유일한 매니저를 갖고온다
+    { 
+        get
+        {
+            Init(); return s_instance; 
+        } 
+    }
 
     private void Start()
     {
