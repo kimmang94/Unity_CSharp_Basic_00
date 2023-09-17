@@ -6,14 +6,19 @@ using UnityEngine;
 public class Managers : MonoBehaviour
 {
     private static Managers s_instance; // 유일성 보장
-    public static Managers Instance // 유일한 매니저를 갖고온다
+    private static Managers Instance // 유일한 매니저를 갖고온다
+    
     { 
         get
         {
             Init(); return s_instance; 
         } 
     }
-
+    private InputManager _input = new InputManager();
+    public static InputManager Input
+    {
+        get { return Instance._input; }
+    }
     private void Start()
     {
         Init();
@@ -21,7 +26,7 @@ public class Managers : MonoBehaviour
 
     private void Update()
     {
-        
+        _input.OnUpdate();
     }
 
     /// <summary>
