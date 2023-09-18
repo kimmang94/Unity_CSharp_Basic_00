@@ -19,6 +19,12 @@ public class Managers : MonoBehaviour
     {
         get { return Instance._input; }
     }
+
+    private ResourcesManager _resources = new ResourcesManager();
+    public static ResourcesManager Resource
+    {
+        get { return Instance._resources; }
+    }
     private void Start()
     {
         Init();
