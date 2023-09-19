@@ -13,6 +13,9 @@ public class TestColision : MonoBehaviour
         Debug.Log("Collision!");
     }
 
+    // 1. 둘다 Colider 가 있어야한다
+    // 2. 둘 중 하나는 isTrigger : on
+    // 3. 둘 중 하나는 RigidBody 가 있어야 한다.
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Trigger!");
