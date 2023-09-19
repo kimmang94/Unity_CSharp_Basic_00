@@ -37,7 +37,7 @@ public class Managers : MonoBehaviour
 
     /// <summary>
     /// 매니저 초기화 함수
-    /// 매니저가 없으면 만들어서 갖고온다
+    /// 매니저가 없으면 만들어서 갖고온다 싱글톤
     /// </summary>
     static void Init()
     {
