@@ -10,7 +10,7 @@ public class TestColision : MonoBehaviour
     // 3. 상태한테 Colider 가 있어야 한다 isTrigger : off
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log("Collision!");
+        //Debug.Log("Collision!");
     }
 
     // 1. 둘다 Colider 가 있어야한다
@@ -19,5 +19,16 @@ public class TestColision : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Trigger!");
+    }
+    
+    private void Start()
+    {
+        
+    }
+
+    private void Update()
+    {
+        // Local <-> World <-> Viewport <-> Screen (화면)
+        Debug.Log(Input.mousePosition);
     }
 }
