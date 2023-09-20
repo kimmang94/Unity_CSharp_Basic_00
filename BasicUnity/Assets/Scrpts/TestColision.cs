@@ -29,6 +29,7 @@ public class TestColision : MonoBehaviour
     private void Update()
     {
         // Local <-> World <-> Viewport <-> Screen (화면)
-        Debug.Log(Input.mousePosition);
+        //Debug.Log(Input.mousePosition); // Screen
+        Debug.Log(Camera.main.ScreenToViewportPoint(Input.mousePosition)); // ViewPort
     }
 }
