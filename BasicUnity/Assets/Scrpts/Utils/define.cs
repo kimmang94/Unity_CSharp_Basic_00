@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class define : MonoBehaviour
+public class Define
 {
-    // Start is called before the first frame update
-    void Start()
+    public enum CameraMode
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        QuarterView,
         
     }
 }
