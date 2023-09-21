@@ -31,7 +31,6 @@ public class TestColision : MonoBehaviour
         // Local <-> World <-> Viewport <-> Screen (화면)
         //Debug.Log(Input.mousePosition); // Screen
         //Debug.Log(Camera.main.ScreenToViewportPoint(Input.mousePosition)); // ViewPort
-
         #region World
         if (Input.GetMouseButtonDown(0))
         {
@@ -45,11 +44,10 @@ public class TestColision : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100.0f, mask))
             {
+                
                 Debug.Log($"RayCast Camera @ {hit.collider.gameObject.name}");
             }
         }
-        
-
         #endregion
        
     }
