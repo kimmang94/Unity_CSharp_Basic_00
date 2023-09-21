@@ -39,7 +39,8 @@ public class TestColision : MonoBehaviour
         
             Debug.DrawRay(Camera.main.transform.position, ray.direction * 100.0f, Color.red, 1.0f);
 
-            int mask = ((1 << 8) | (1 << 9));
+            LayerMask mask = LayerMask.GetMask("Monster");
+            //int mask = ((1 << 8) | (1 << 9));
             
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100.0f, mask))
