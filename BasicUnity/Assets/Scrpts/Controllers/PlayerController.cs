@@ -30,7 +30,8 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                transform.position += dir.normalized * _speed * Time.deltaTime;
+                float moveDist = Mathf.Clamp(_speed * Time.deltaTime, 0, dir.magnitude);
+                transform.position += dir.normalized * moveDist;
                 transform.LookAt(_destPos);
             }
         }
