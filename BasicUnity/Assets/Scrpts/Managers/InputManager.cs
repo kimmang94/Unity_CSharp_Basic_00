@@ -11,11 +11,6 @@ public class InputManager
     private bool _pressed = false;
     public  void OnUpdate()
     {
-        if (Input.anyKey && Input.anyKey != null)
-        {
-            KeyAction.Invoke();
-        }
-
         if (MouseAction != null)
         {
             if (Input.GetMouseButton(0))
