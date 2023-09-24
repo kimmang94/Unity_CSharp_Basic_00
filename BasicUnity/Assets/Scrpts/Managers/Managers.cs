@@ -7,7 +7,6 @@ public class Managers : MonoBehaviour
 {
     private static Managers s_instance; // 유일성 보장
     private static Managers Instance // 유일한 매니저를 갖고온다
-    
     { 
         get
         {
