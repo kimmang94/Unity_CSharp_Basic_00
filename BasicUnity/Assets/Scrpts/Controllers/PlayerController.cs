@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
+
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _speed = 10.0f;
@@ -49,19 +50,24 @@ public class PlayerController : MonoBehaviour
         }
         
         // 애니메이션
-        wait_run_ratio = Mathf.Lerp(wait_run_ratio, 1 , 10.0f * Time.deltaTime);
+
         Animator anim = GetComponent<Animator>();
-        anim.SetFloat("wait_run_ratio", wait_run_ratio);
-        anim.Play("Wait_Run");
+        //현재 게임 상태에 대한 정보를 넘겨준다
+        anim.SetFloat("speed", _speed);
+        
+
+    }
+
+    private void OnRunEvent()
+    {
+        Debug.Log("와다다");
     }
     private void UpdateIdle()
     {
-        
         // 애니메이션
-        wait_run_ratio = Mathf.Lerp(wait_run_ratio, 0 , 10.0f * Time.deltaTime);
         Animator anim = GetComponent<Animator>();
-        anim.SetFloat("wait_run_ratio", wait_run_ratio);
-        anim.Play("Wait_Run");
+        anim.SetFloat("speed", 0);
+
     }
     private void Update()
     {
@@ -88,10 +94,7 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-        
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Debug.DrawRay(Camera.main.transform.position, ray.direction * 100.0f, Color.red, 1.0f);
-        Debug.Log("Click");
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 100.0f, LayerMask.GetMask("Wall")))
         { 
@@ -100,4 +103,3 @@ public class PlayerController : MonoBehaviour
         }
     }
 }
-
