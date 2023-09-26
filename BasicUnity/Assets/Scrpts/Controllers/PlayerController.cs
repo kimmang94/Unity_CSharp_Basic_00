@@ -65,7 +65,6 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
-        
         switch(_state)
         {
             case PlayerState.Die:
@@ -78,9 +77,6 @@ public class PlayerController : MonoBehaviour
                 UpdateIdle();
                 break;
         }
-
-        
-        
     }
     
     /// <summary>
