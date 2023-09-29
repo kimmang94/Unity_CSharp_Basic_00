@@ -169,7 +169,7 @@ RectTransform:
   - {fileID: 332623560297992723}
   - {fileID: 8821603002714902800}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -251,7 +251,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd8fc4d226146c4ea5cb742afaa338d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 1981594170304206091}
 --- !u!1 &7284027397954760231
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +343,7 @@ GameObject:
   - component: {fileID: 5559490307634197321}
   - component: {fileID: 1981594170304206091}
   m_Layer: 5
-  m_Name: ScroeText
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
