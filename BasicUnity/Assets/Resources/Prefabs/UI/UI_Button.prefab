@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3857234698850087667}
   - component: {fileID: 2871336574607711020}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: PointButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -169,7 +169,7 @@ RectTransform:
   - {fileID: 332623560297992723}
   - {fileID: 8821603002714902800}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 2726215744837581147}
   - component: {fileID: 1935798425832065568}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: PointText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 5559490307634197321}
   - component: {fileID: 1981594170304206091}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: ScroeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
