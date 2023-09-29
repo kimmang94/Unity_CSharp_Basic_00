@@ -13,6 +13,12 @@ public class Define
     public enum CameraMode
     {
         QuarterView,
+    }
+
+    public enum UIEvent
+    {
+        Click,
+        Drag,
         
     }
 }

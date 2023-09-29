@@ -8,7 +8,7 @@ using Object = UnityEngine.Object;
 
 public class UI_Button : UI_Base
 {
-    private int score = 0;
+   
  
     private enum Buttons
     {
@@ -25,7 +25,6 @@ public class UI_Button : UI_Base
     private enum GameObject
     {
         TestObject,
-        
     }
 
     private enum Images
@@ -40,15 +39,19 @@ public class UI_Button : UI_Base
         Bind<UnityEngine.GameObject>(typeof(GameObject));
         Bind<Image>(typeof(Images));
         
-        GetText((int)Texts.ScoreText).text = "Bind Test";
-        UnityEngine.GameObject go = GetImage((int)Images.ItemIcon).gameObject;
-        UI_EvnetHandler evt = go.GetComponent<UI_EvnetHandler>();
-        evt.OnDragHandler += ((PointerEventData data) => { evt.gameObject.transform.position = data.position; });
-    }
 
-   
-    public void OnButtonClicked()
+
+        GetButton((int)Buttons.PointButton).gameObject.AddUIEvent(OnButtonClicked);
+        
+        UnityEngine.GameObject go = GetImage((int)Images.ItemIcon).gameObject;
+        AddUIEvent(go, (PointerEventData data) => { go.transform.position = data.position; },
+            Define.UIEvent.Drag);
+
+    }
+    private int score = 0;
+    public void OnButtonClicked(PointerEventData data)
     {
         score++;
+        GetText((int)Texts.ScoreText).text = $"점수 : {score}";
     }
 }
