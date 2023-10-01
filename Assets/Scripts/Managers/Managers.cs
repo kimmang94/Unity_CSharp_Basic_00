@@ -8,11 +8,11 @@ public class Managers : MonoBehaviour
     static Managers s_instance; // 유일성이 보장된다
     static Managers Instance { get { Init(); return s_instance; } } // 유일한 매니저를 갖고온다
 
-    InputManager _input = new InputManager();
-    ResourceManager _resource = new ResourceManager();
+    private InputManager _input = new InputManager();
+    private ResourceManager _resource = new ResourceManager();
     private SceneManagerEx _scene = new SceneManagerEx();
-    UIManager _ui = new UIManager();
-
+    private UIManager _ui = new UIManager();
+    private SoundManager _sound = new SoundManager();
     public static InputManager Input { get { return Instance._input; } }
     public static ResourceManager Resource { get { return Instance._resource; } }
     public static SceneManagerEx Scene
@@ -20,6 +20,10 @@ public class Managers : MonoBehaviour
         get { return Instance._scene; }
     }
     public static UIManager UI { get { return Instance._ui; } }
+    public static SoundManager Sound
+    {
+        get { return Instance._sound; }
+    }
 
     void Start()
     {
@@ -44,6 +48,15 @@ public class Managers : MonoBehaviour
 
             DontDestroyOnLoad(go);
             s_instance = go.GetComponent<Managers>();
+            s_instance._sound.Init();
 		}		
 	}
+
+    public static void Clear()
+    {
+        Sound.Claer();
+        Input.Clear();
+        Scene.Clear();
+        UI.Clear();
+    }
 }

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerEx
 {
-    public BaseScene CurrentScneScene
+    public BaseScene CurrentScne
     {
         get
         {
@@ -15,7 +15,7 @@ public class SceneManagerEx
     
     public void LoadScene(Define.Scene type)
     {
-        CurrentScneScene.Clear();
+        Managers.Clear();
         SceneManager.LoadScene(GetSceneName(type));
     }
 
@@ -23,5 +23,10 @@ public class SceneManagerEx
     {
        string name = System.Enum.GetName(typeof(Define.Scene), type);
        return name;
+    }
+
+    public void Clear()
+    {
+        CurrentScne.Clear();
     }
 }
