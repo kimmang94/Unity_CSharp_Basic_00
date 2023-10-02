@@ -22,6 +22,8 @@ public class TestSound : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            AudioSource audio = GetComponent<AudioSource>();
+            //audio.PlayClipAtPoint();
             Managers.Sound.Play( "UnityChan/univ0001",Define.Sound.Effect);
             Debug.Log("Hit");
         }
